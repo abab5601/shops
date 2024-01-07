@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import NotFound from "../components/NotFound.vue";
 const routes = [
   {
     path: '/',
@@ -15,7 +16,8 @@ const routes = [
     name: 'productsinfo',
     component: () => import('../components/products/productsinfo.vue'),
     props: true
-  }
+  },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({
