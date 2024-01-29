@@ -5,6 +5,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- You can use Open Graph tags to customize link previews.
+Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url" content="<%= BASE_URL %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" name="title" content="Title" />
+  <meta property="og:description" name="description" content="Your description" />
+  <meta data-n-head="1" data-hid="description" name="description" content="">
+
+  <!-- <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
+
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>
@@ -24,6 +34,17 @@
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>

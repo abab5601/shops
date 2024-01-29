@@ -2,9 +2,9 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <router-link to="/">
-            <span class="navbar-brand order-0" style="color: #361401;"><span class="material-symbols-outlined">
-                    local_cafe
-                </span>綻咖啡</span>
+                <span class="navbar-brand order-0" style="color: #361401;"><span class="material-symbols-outlined">
+                        local_cafe
+                    </span>綻咖啡</span>
             </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                             <router-link to="/" class="nav-link">首頁</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">資訊</a>
+                            <router-link to="/about" class="nav-link">資訊</router-link>
                         </li>
                     </ul>
                 </div>
@@ -33,6 +33,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
 </script>
-<style>
-
-</style>
+<style></style>

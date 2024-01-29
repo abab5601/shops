@@ -5,20 +5,18 @@
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
-        <img v-else :src="carddata.img ? carddata.img : 'nocard.jpg'" class="card-img-top" :alt="carddata.img ? carddata.name : '無法預覽片'">
+        <img v-else :src="carddata.img ? `products/${id}/${carddata.img}` : 'nocard.jpg'" class="card-img-top" :alt="carddata.img ? carddata.name : '無法預覽片'">
         <div class="card-body">
             <h5 class="card-title">{{ carddata.name ?? props.name }}</h5>
             <p class="card-text">{{ isload ? '載入中' : carddata.abrief ?? '沒有說明' }}</p>
             <p class="card-text text-warning" v-if="iserrorState">找不到商品</p>
         </div>
-        <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul> -->
         <div class="card-body">
-            <router-link @click="console.log(123)" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" to="/" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
+            <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" to="/" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
         </div>
+        <ul class="list-group list-group-flush bg-dark bg-opacity-50" v-if="carddata.type">
+            <li class="list-group-item" v-for="(item, index) in carddata.type">{{ item }}</li>
+        </ul>
     </div>
 </template>
 <script setup>
