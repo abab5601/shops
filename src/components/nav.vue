@@ -2,9 +2,8 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <router-link to="/">
-                <span class="navbar-brand order-0" style="color: #361401;"><span class="material-symbols-outlined">
-                        local_cafe
-                    </span>綻咖啡</span>
+                <span class="navbar-brand order-0" style="color: #361401;"><img src="/favicon.svg" style="vertical-align: bottom; height: 60px;">綻咖啡
+                </span>
             </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -33,4 +32,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
 </script>
-<style></style>
+<style>
+</style>

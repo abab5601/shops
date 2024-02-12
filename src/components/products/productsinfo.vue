@@ -7,7 +7,7 @@
         <carouselImg :imgs="carimgs" v-bind:showimgbox="true" @click="() => Modalshow.click()" height="50vh"></carouselImg>
         <button style="display: none;" type="button" ref="Modalshow" data-bs-toggle="modal" data-bs-target="#myModal"></button>
         <h5 class="mt-1 fw-bold">{{ carddata.name }}</h5>
-        <h6 class="text-danger">{{ carddata.price }}元</h6>
+        <h6 v-html="carddata.price??''+'元'"></h6>
         <strong>商品詳情</strong>
         <div v-html="carddata.description"></div>
         <strong v-if="carddata.usage" class="d-block mt-3">商品詳情</strong>

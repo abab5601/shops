@@ -10,6 +10,7 @@
             <h5 class="card-title">{{ carddata.name ?? props.name }}</h5>
             <p class="card-text">{{ isload ? '載入中' : carddata.abrief ?? '沒有說明' }}</p>
             <p class="card-text text-warning" v-if="iserrorState">找不到商品</p>
+            <p class="card-text" v-html="carddata.price??''+'元'"></p>
         </div>
         <div class="card-body">
             <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" to="/" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
@@ -42,11 +43,16 @@ ajax(`products/${props.id}.json`, 'GET').then((request) => request.json()).then(
 })
 </script>
 <style>
-.card {
-    max-width: 200px;
-}
 
 .card * {
     --bs-border-width: 0.5px;
+}
+.card {
+    margin-bottom: 2px;
+}
+@media (min-width: 768px){
+    .card {
+        max-width: 200px;
+    }
 }
 </style>

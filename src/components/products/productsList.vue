@@ -4,8 +4,8 @@
         <div class="border border-secondary rounded mb-1" v-for="(item, index) in data" :key="item.name">
             <p class="fs-4" style="text-align: center;">{{ item.name }}</p>
             <div class="row custom-padding-md m-0" v-if="item.list.length > 0" style="justify-content: center; padding: 0.5px;">
-                <productsCard :Spinners="getSpC()" class="col-6" :id="card.id" :name="card.name" v-for="(card, index2) in item.list" :key="card.id" />
-                <div v-if="item.list.length % 2 == 1" class="card col-6" style="opacity: 0;"></div>
+                <productsCard :Spinners="getSpC()" class="col-md-6 col-12" :id="card.id" :name="card.name" v-for="(card, index2) in item.list" :key="card.id" />
+                <div v-if="item.list.length % 2 == 1" class="card col-md-6 col-12" style="opacity: 0;"></div>
             </div>
             <div v-else class="col-12">
                 <p>暫無商品</p>
