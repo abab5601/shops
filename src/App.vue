@@ -1,10 +1,11 @@
 <template>
   <Vnav />
   <router-view />
+  <CheckoutVue></CheckoutVue>
 </template>
 <script setup>
 import Vnav from './components/nav.vue';
-
+import CheckoutVue from './components/Checkout.vue';
 </script>
 <style lang="scss">
 body {

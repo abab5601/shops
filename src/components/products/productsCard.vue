@@ -14,6 +14,7 @@
         </div>
         <div class="card-body">
             <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" to="/" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
+            <addstore btnclass="btn btn-outline-success" v-bind="props"></addstore>
         </div>
         <ul class="list-group list-group-flush bg-dark bg-opacity-50" v-if="carddata.type">
             <li class="list-group-item" v-for="(item, index) in carddata.type">{{ item }}</li>
@@ -25,6 +26,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { defineProps, ref } from "vue";
 import { RouterLink } from "vue-router";
+import addstore from "./addstore.vue";
 const props = defineProps({
     id: String,
     name: String,
