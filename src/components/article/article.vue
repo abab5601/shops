@@ -1,5 +1,5 @@
 <template>
-    <p v-html="text" class="p-2"></p>
+    <div v-html="text" class="p-2 w-100" style="height: 85%;"></div>
 </template>
 <script setup>
 const props = defineProps(["id"]);
