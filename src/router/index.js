@@ -29,6 +29,12 @@ const routes = [
     component: () => import('../components/products/productsinfo.vue'),
     props: true,
   },
+  {
+    path: '/article/:id',
+    name: 'article',
+    component: () => import('../components/article/article.vue'),
+    props: true,
+  },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 

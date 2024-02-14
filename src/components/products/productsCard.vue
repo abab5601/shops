@@ -10,10 +10,10 @@
             <h5 class="card-title">{{ carddata.name ?? props.name }}</h5>
             <p class="card-text">{{ isload ? '載入中' : carddata.abrief ?? '沒有說明' }}</p>
             <p class="card-text text-warning" v-if="iserrorState">找不到商品</p>
-            <p class="card-text" v-html="carddata.price??''+'元'"></p>
         </div>
-        <div class="card-body">
-            <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" to="/" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
+        <div class="card-body" style="flex: 0 1 auto;">
+            <p class="card-text" v-html="carddata.price??''+'元'"></p>
+            <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
             <addstore btnclass="btn btn-outline-success" v-bind="props"></addstore>
         </div>
         <ul class="list-group list-group-flush bg-dark bg-opacity-50" v-if="carddata.type">

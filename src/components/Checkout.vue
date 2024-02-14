@@ -75,7 +75,7 @@ function copy() {
 }
 const Pricedata = ref({})
 import ajax from "@/ajax";
-ajax(`products/Price.json`, 'GET').then((request) => request.json()).then((json) => {
+ajax(`/products/Price.json`, 'GET').then((request) => request.json()).then((json) => {
     Pricedata.value = json;
 }).catch((error) => {
     console.error(error);
