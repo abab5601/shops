@@ -50,7 +50,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="validationTextarea" class="form-label">建議訊息內容</label>
-                        <textarea ref="textarea" class="form-control" id="validationTextarea" placeholder="可以自行變更訊息內容" v-model="msgtype"></textarea>
+                        <textarea ref="textarea" class="form-control" id="validationTextarea" placeholder="可以自行變更訊息內容" v-model="msgtype" style="height: 200px;"></textarea>
                     </div>
                     <button type="button" class="btn btn-primary" @click="copy"><i class="bi bi-copy"></i> 複製訊息內容</button>
                     <a href="https://lin.ee/PgHNmwA"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>

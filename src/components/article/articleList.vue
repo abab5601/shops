@@ -1,8 +1,8 @@
 <template>
     <h3 class="fs-3 text-center">推薦文章</h3>
-    <div class="list-group">
-        <template v-for="(item, index) in  showlist ">
-            <router-link :to="{ name: 'article', params: { id: item.id } }" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="list-group" style="flex-wrap: wrap; flex-direction: row;justify-content: center;">
+        <template v-for="(item, index) in  showlist " :key="item.id">
+            <router-link :to="{ name: 'article', params: { id: item.id } }" class="list-group-item list-group-item-action m-1" aria-current="true" style="max-width: 700px;">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ item.name }}</h5>
                     <small>{{ formatDate(item.addtime) }}</small>
