@@ -25,7 +25,7 @@
 <script setup>
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { computed, ref, defineEmits } from "vue";
+import { computed, ref } from "vue";
 const props = defineProps({
     imgs: {
         type: Array,

@@ -7,9 +7,8 @@
     </div>
 </template>
 <script setup>
-import { compile, computed, defineProps } from 'vue';
+import { computed } from 'vue';
 import { useStore } from 'vuex';
-import { ref } from 'vue';
 const props = defineProps({
     id: {
         type: String
@@ -32,7 +31,7 @@ function save(isnull) {
     if (numberVal || isnull)
         store.commit('save', { ...props, value: numberVal });
 }
-const numberVal = null;
+let numberVal = null;
 const number = computed({
     get() {
         return store.getters.car?.[props.id];

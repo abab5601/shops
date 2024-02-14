@@ -12,7 +12,7 @@
             <p class="card-text text-warning" v-if="iserrorState">找不到商品</p>
         </div>
         <div class="card-body" style="flex: 0 1 auto;">
-            <p class="card-text" v-html="carddata.price??''+'元'"></p>
+            <p class="card-text" v-html="carddata.price ?? '' + '元'"></p>
             <router-link :to="'/productsinfo/' + props.id" v-bind:class="{ disabled: isload }" class="btn btn-outline-primary" role="button" v-bind:aria-disabled="isload" :tabindex="isload ? -1 : 0">查看詳細資料</router-link>
             <addstore btnclass="btn btn-outline-success" v-bind="props"></addstore>
         </div>
@@ -24,7 +24,7 @@
 <script setup>
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { defineProps, ref } from "vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import addstore from "./addstore.vue";
 const props = defineProps({
@@ -45,14 +45,15 @@ ajax(`products/${props.id}.json`, 'GET').then((request) => request.json()).then(
 })
 </script>
 <style>
-
 .card * {
     --bs-border-width: 0.5px;
 }
+
 .card {
     margin-bottom: 2px;
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     .card {
         max-width: 200px;
     }

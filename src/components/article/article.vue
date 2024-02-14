@@ -4,7 +4,7 @@
 <script setup>
 const props = defineProps(["id"]);
 import ajax from '@/ajax';
-import { ref, defineOptions } from 'vue';
+import { ref } from 'vue';
 const text = ref("");
 ajax(`${props.id}.txt`, 'GET').then((request) => request.text()).then((json) => {
     text.value = json

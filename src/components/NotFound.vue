@@ -11,7 +11,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
 import { RouterLink } from "vue-router";
-import { defineProps } from "vue";
 const props = defineProps({
     code: {
         default: 404

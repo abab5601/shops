@@ -14,7 +14,6 @@
     </div>
 </template>
 <script setup>
-import { defineProps } from "vue";
 import productsCard from "./productsCard.vue";
 const props = defineProps({
     id: String,
