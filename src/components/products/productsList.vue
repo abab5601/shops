@@ -46,4 +46,7 @@ function getSpC() {
         padding: 8px !important;
     }
 }
+.card{
+    margin-bottom: 1em;
+}
 </style>

@@ -31,7 +31,7 @@ ajax(`article/list.json`, 'GET').then((request) => request.json()).then((json) =
 const today = new Date();
 const showlist = computed(() => {
     const index = list.value.findIndex((item) => item.addtime <= today);
-    return list.value.slice(index, index + 3);
+    return list.value.slice(index, index + 6);
 })
 function formatDate(date) {
     const now = new Date();
