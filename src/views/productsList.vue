@@ -2,6 +2,9 @@
     <carouselImg />
     <br/>
     <img class="w-100" src="314893.jpg" alt="" style="margin: auto;display: block;max-width: 700px;">
+    <div class="d-flex justify-content-center">
+        <video autoplay src="/main.mp4" style="width: 100%; max-width: 500px;" controls></video>
+    </div>
     <articleList></articleList>
     <br/>
     <productsList :name="item.name" :data="item.list" v-for="(item,index) in productsListdata" :key="item.name"/>
