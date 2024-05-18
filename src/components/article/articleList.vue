@@ -18,7 +18,8 @@ import ajax from "@/ajax";
 import { computed, ref } from "vue";
 import { RouterLink } from "vue-router";
 const list = ref([]);
-ajax(`article/list.json`, 'GET').then((request) => request.json()).then((json) => {
+var timestamp = new Date().getTime();
+ajax(`article/list.json?${timestamp}`, 'GET').then((request) => request.json()).then((json) => {
     json.forEach(item => {
         if (item.addtime)
             item.addtime = new Date(item.addtime)
