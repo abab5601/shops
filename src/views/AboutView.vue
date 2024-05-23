@@ -10,11 +10,9 @@
         <h2>聯絡我們</h2>
         <p>有任何問題或建議？歡迎隨時與我們聯繫：</p>
         <ul class="list-unstyled">
-          <li><strong>Email：</strong> info@zanacoffee.com</li>
-          <li><strong>電話：</strong> +123 456 7890</li>
-          <li><strong>地址：</strong> 台灣某地</li>
-          <li><strong>Line：</strong> <a href="https://line.me/ti/p/@yourlineid" target="_blank">綻咖啡Line</a></li>
-          <li><strong>Instagram：</strong> <a href="https://www.instagram.com/yourinstagram" target="_blank">綻咖啡IG</a></li>
+          <li><strong>電話：</strong><a href="tel:0926909887">0926909887</a></li>
+          <li><img src="/lineQrcode.jpg" alt="Line QR Code" class="img-fluid"></li>
+          <li><strong>Line：</strong> <a href="https://line.me/R/ti/g/NPku7voJFa" target="_blank">綻咖啡Line群組</a></li>
         </ul>
       </div>
     </div>

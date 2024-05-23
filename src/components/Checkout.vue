@@ -53,7 +53,11 @@
                         <textarea ref="textarea" class="form-control" id="validationTextarea" placeholder="可以自行變更訊息內容" v-model="msgtype" style="height: 200px;"></textarea>
                     </div>
                     <button type="button" class="btn btn-primary" @click="copy"><i class="bi bi-copy"></i> 複製訊息內容</button>
-                    <a href="https://lin.ee/PgHNmwA"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" border="0"></a>
+                    <a v-if="ismobile" href="https://lin.ee/PgHNmwA"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入群組訂購" height="36" border="0"></a>
+                    <div v-else>
+                        <img src="/lineQrcode.jpg" alt="掃描Qrcode訂購">
+                        <h5>掃描Qrcode訂購</h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,6 +72,7 @@
 import { computed, ref } from 'vue';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import addstore from './products/addstore.vue';
+const ismobile = mobile();
 const msgtype = ref();
 const textarea = ref(null);
 function copy() {
@@ -105,4 +110,13 @@ const msglist = computed(() => {
     sum += "總計：" + sum_.value
     return sum;
 })
+
+function mobile() {
+    try {
+        document.createEvent("TouchEvent");
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 </script>
