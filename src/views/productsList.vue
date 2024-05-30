@@ -1,13 +1,13 @@
 <template>
     <carouselImg />
     <br/>
+    <productsList :name="item.name" :data="item.list" v-for="(item,index) in productsListdata" :key="item.name"/>
+    <br/>
     <img class="w-100" src="314893.jpg" alt="" style="margin: auto;display: block;max-width: 700px;">
     <div class="d-flex justify-content-center">
         <video muted autoplay src="/main.mp4" style="width: 100%; max-width: 500px;" controls></video>
     </div>
     <articleList></articleList>
-    <br/>
-    <productsList :name="item.name" :data="item.list" v-for="(item,index) in productsListdata" :key="item.name"/>
 </template>
 <script setup>
 import carouselImg from "../components/carouselImg.vue";
